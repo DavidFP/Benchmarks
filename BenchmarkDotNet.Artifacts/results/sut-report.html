@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>sut-20230731-104414</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.6, Windows 10 (10.0.19045.3086/22H2/2022Update)
+11th Gen Intel Core i7-1165G7 2.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK 7.0.302
+  [Host]     : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                    Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>UsingASwitchExistingElement</td><td>0.6933 ns</td><td>0.0124 ns</td><td>0.0110 ns</td><td>0.6940 ns</td>
+</tr><tr><td>UsingASwitchNoExistingElement</td><td>0.7550 ns</td><td>0.0560 ns</td><td>0.0524 ns</td><td>0.7513 ns</td>
+</tr><tr><td>UsingANewSwitchExistingElement</td><td>2.4072 ns</td><td>0.0933 ns</td><td>0.1610 ns</td><td>2.3958 ns</td>
+</tr><tr><td>UsingANewSwitchNoExistingElement</td><td>1.9737 ns</td><td>0.0852 ns</td><td>0.2089 ns</td><td>1.9361 ns</td>
+</tr><tr><td>UsingDictionaryExistingElement</td><td>9.7720 ns</td><td>0.2391 ns</td><td>0.2456 ns</td><td>9.8356 ns</td>
+</tr><tr><td>UsingDictionaryNoExistingElement</td><td>11.0380 ns</td><td>1.1314 ns</td><td>3.3361 ns</td><td>9.6394 ns</td>
+</tr></tbody></table>
+</body>
+</html>
